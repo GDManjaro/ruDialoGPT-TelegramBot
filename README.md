@@ -1,6 +1,8 @@
 # ruDialoGPT-TelegramBot
 Это конечно не чат джипити, но зато умеет вести диалоги.
 
+Бот работает на https://hf.co/tinkoff-ai/ruDialoGPT-medium
+
 # Как запустить
 ну во-первых нужен установленный пайтон (бота запускал на 3.9)
 https://www.python.org/downloads/
