@@ -31,7 +31,7 @@ async def echo(message: types.Message):
     themsg = await message.answer("Ждите...")
     msize = len(message.text)
     inputs = tokenizer(f'{message.text} ', return_tensors='pt')
-    generated_token_ids = model.generate(
+    generated_token_ids = model.generate( 
     **inputs,
     top_k=10,
     top_p=0.95,
@@ -45,7 +45,7 @@ async def echo(message: types.Message):
     eos_token_id=50257,
     pad_token_id=50257,
     max_new_tokens=40
-    )
+    ) # тут можно поиграться с настройками, чтобы бот по разному отвечал
     context_with_response = [tokenizer.decode(sample_token_ids) for sample_token_ids in generated_token_ids]
     toans = context_with_response[0][msize::]
     toans = toans.replace('@@ПЕРВЫЙ@@', '')
